@@ -10,11 +10,18 @@ namespace EvenOdd
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Podaj mi dowolną liczbę całkowitą a ja powiem Ci czy ta liczba jest parzysta czy nieparzysta.");
             var selectedNumber = GetNumber();
-
-
+            var rest = (selectedNumber % 2);
+            if (rest == 0)
+            {
+                Console.WriteLine("Podana przez Ciebie licza jest parzysta.");
+            }
+            else
+            {
+                Console.WriteLine("Podana przez Ciebie liczba jest nieparzysta.");
+            }
         }
-
         private static int GetNumber()
         {
             while (true)
